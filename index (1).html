@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--p1:#8b1d2c;--p2:#b03a48;--p3:#d8aeb0;--p4:#f8ebe8;--ink:#5a1420;--card:rgba(255,251,246,.9);--inp:#fffaf5;--paper:#f2ece4;color-scheme:light;box-sizing:border-box}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background-color:var(--paper);background-image:linear-gradient(#d8cfc6 1px,transparent 1px),linear-gradient(90deg,#d8cfc6 1px,transparent 1px);background-size:28px 28px}
+.scr{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:calc(20px + env(safe-area-inset-top,0px)) 18px calc(20px + env(safe-area-inset-bottom,0px));overflow:auto;z-index:1}
+.scr.on{display:flex;animation:in .6s}
+@keyframes in{from{opacity:0;transform:scale(.97)}}
+.dk{background:radial-gradient(circle at 50% 40%,#3a0a2c,#12000e);color:#ffd3e8}
+h1,h2{font-family:'Mrs Saint Delafield',cursive;font-weight:400;margin:.1em 0;color:var(--p1);line-height:.95}
+h1{font-size:clamp(60px,15vw,110px)}h2{font-size:clamp(38px,9vw,56px)}
+.card{background:var(--card);backdrop-filter:blur(8px);border-radius:26px;padding:26px 22px;width:100%;max-width:520px;box-shadow:0 10px 30px rgba(90,20,32,.2);border:2px dashed var(--p1);margin:auto}
+input,textarea{width:100%;font:inherit;padding:13px 16px;border-radius:16px;border:2px solid var(--p3);background:var(--inp);color:var(--ink);margin:6px 0;outline:none}
+input:focus,textarea:focus{border-color:var(--p1)}
+.dk input{background:#2b0a21;color:#ffe3f1;text-align:center;font-size:20px}
+.btn{font:600 16px Poppins,sans-serif;border:0;border-radius:40px;padding:13px 30px;margin:8px 5px;color:#fff;background:linear-gradient(135deg,var(--p1),var(--p2));box-shadow:0 6px 16px rgba(90,20,32,.35);cursor:pointer;transition:transform .15s}
+.btn:active{transform:scale(.95)}.btn.alt{background:#fffaf5;color:var(--p1);border:2px solid var(--p1);box-shadow:none}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+#num{position:relative;font:700 clamp(120px,40vw,300px)/1 Poppins,sans-serif;color:#fff;text-shadow:0 0 30px #ff4d94,0 0 70px #ff4d94}
+#num.pop{animation:pop 1s}@keyframes pop{0%{transform:scale(1.6);opacity:0}25%{opacity:1}100%{transform:scale(.9);opacity:.85}}
+#ctl{position:relative;font-size:20px;letter-spacing:3px}
+.ph{width:130px;height:130px;border-radius:50%;margin:0 auto 8px;border:5px solid #fff;background:var(--p4);box-shadow:0 0 0 4px var(--p1),0 8px 20px rgba(90,20,32,.3);display:flex;align-items:center;justify-content:center;font-size:56px;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.opt{display:block;width:100%;margin:9px 0;padding:13px;border-radius:16px;border:2px solid var(--p3);background:var(--inp);color:var(--ink);font:600 15px Poppins,sans-serif;cursor:pointer;transition:.2s}
+.opt:hover{border-color:var(--p1);background:var(--p4);color:var(--ink)}
+.opt.ok{background:#7be0a4;border-color:#3cb871;color:#06361b}
+.opt.bad{background:#ffb3c8;border-color:var(--p1);color:#5a0020;animation:sh .4s}
+@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+#locks{font-size:30px;letter-spacing:8px}.sm{font-size:13px;opacity:.8}
+.paper{background:linear-gradient(#fffdf8,#fff3f8);color:#4a2a45;text-align:left;white-space:pre-wrap;line-height:1.75;border-radius:14px;padding:20px;margin:12px 0;border-left:6px solid var(--p2);font-size:15.5px;max-height:52vh;overflow:auto}
+.run{position:fixed;z-index:4}#yes{position:relative;z-index:5}
+#fx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+#fx span{position:absolute;bottom:-50px;opacity:.75;animation:up linear infinite}
+@keyframes up{to{transform:translateY(-115vh) rotate(40deg)}}
+#ed{position:fixed;inset:0;display:none;overflow:auto;background:rgba(20,10,40,.85);z-index:50;padding:16px}#ed.on{display:block}
+#ed label{display:block;text-align:left;font-weight:600;margin-top:12px}
+#art{position:fixed;inset:0;z-index:0;pointer-events:none;display:none;overflow:hidden}
+.deco{position:absolute;color:var(--p1)}.deco svg{display:block;width:100%;height:auto}
+.gm{position:absolute;background:repeating-conic-gradient(#9a2434 0 25%,#f4ece6 0 50%) 0 0/24px 24px;border:3px solid #6e1220}
+.mid{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;margin:auto}
+.wl{font:700 clamp(13px,3.4vw,18px) Poppins,sans-serif;letter-spacing:3px;color:var(--p1);margin-top:6px}
+.pill{margin:12px 0;padding:15px 30px;min-width:min(78vw,380px);border-radius:60px;border:2px solid var(--p1);background:#efe3e0;color:var(--p1);font:600 15px Poppins,sans-serif;box-shadow:0 8px 14px rgba(90,20,32,.25);outline:2px dashed var(--p1);outline-offset:-8px;cursor:pointer}
+.pill:active{transform:scale(.97)}
+#fl2{transform-origin:150px 52px;animation:fk .45s ease-in-out infinite alternate}@keyframes fk{to{transform:scale(1.1,.9) rotate(4deg)}}
+.tw{animation:tw 2.2s ease-in-out infinite}@keyframes tw{50%{opacity:.25;transform:scale(.7)}}
+</style></head><body>
+<div id="art"></div><div id="fx"></div><canvas id="cf" style="position:fixed;inset:0;pointer-events:none;z-index:30"></canvas>
+
+<section class="scr dk on" id="s0">
+ <h1>🎂 Surprise!</h1>
+ <p>Before we start… what’s your name?</p>
+ <input id="nm" placeholder="Type your name" maxlength="30" autocomplete="off" style="max-width:340px">
+ <button class="btn" id="go">Let’s go ✨</button>
+</section>
+
+<section class="scr dk" id="s1">
+ <canvas id="cv"></canvas>
+ <div id="num">9</div><div id="ctl">HAPPY&nbsp;BIRTHDAY</div>
+</section>
+
+<section class="scr" id="s2">
+ <div class="mid" id="wish">
+  <div class="ph" id="ph1" style="width:96px;height:96px;font-size:42px">🎂</div>
+  <h1 id="hb">Happy Birthday</h1><h2 id="who"></h2>
+  <div class="wl">MAKE A WISH!!</div>
+  <button class="pill" id="blow">Tap to blow the candle 🕯️</button>
+  <svg viewBox="0 0 300 260" fill="none" stroke="#8b1d2c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:min(80vw,340px)"><ellipse cx="150" cy="236" rx="128" ry="16" fill="#efe3e0"/><path d="M45 160Q150 130 255 160V222Q150 252 45 222Z" fill="#f8f1ea"/><ellipse cx="150" cy="158" rx="105" ry="22" fill="#fffaf5"/><path d="M52 172q14 20 28 4q14 20 28 4q14 20 28 4q14 20 28 4q14 20 28 4q14 20 28 4q14 20 28 4" fill="#fff"/><path d="M47 204Q150 236 253 204" stroke-width="5" stroke="#b03a48"/><path d="M85 114Q150 94 215 114V160Q150 180 85 160Z" fill="#f8f1ea"/><ellipse cx="150" cy="112" rx="65" ry="15" fill="#fffaf5"/><path d="M86 120q10 22 20 0q10 24 20 0q10 26 20 0q10 24 20 0q10 22 20 0q10 18 14 0" fill="#fff"/><path d="M150 226c-24-22-38-2-28 7 9 8 22 1 28-7zM150 226c24-22 38-2 28 7-9 8-22 1-28-7zM146 230l-10 16M154 230l10 16" fill="#8b1d2c"/><g fill="#8b1d2c" stroke="none"><circle cx="70" cy="190" r="3.5"/><circle cx="105" cy="199" r="3.5"/><circle cx="195" cy="199" r="3.5"/><circle cx="230" cy="190" r="3.5"/><circle cx="110" cy="147" r="3"/><circle cx="190" cy="147" r="3"/></g><path d="M150 150c-8-9-18-1-10 6l10 8 10-8c8-7-2-15-10-6z" fill="#8b1d2c"/><rect x="144" y="56" width="12" height="52" rx="2" fill="#fff"/><path d="M144 66l12 6M144 78l12 6M144 90l12 6M144 102l12 4"/><circle id="gl" cx="150" cy="38" r="20" fill="#ffd27a" opacity=".5" stroke="none"/><path id="fl2" d="M150 52c-10-11 0-19 0-28 10 8 10 18 0 28z" fill="#f4a63b" stroke-width="2"/><path d="M28 84v16M20 92h16M274 70v14M267 77h14M40 40l5 5M262 36l5 5" stroke-width="2"/></svg>
+ </div>
+ <div class="card" id="qz" style="display:none">
+  <p id="intro"></p>
+  <div id="locks">🔒🔒🔒</div>
+  <p class="sm" id="qn"></p>
+  <h2 id="qt" style="font:600 22px Poppins,sans-serif;color:var(--ink)"></h2>
+  <div id="opts"></div><p class="sm" id="hint"></p>
+ </div>
+</section>
+
+<section class="scr" id="s3">
+ <div class="card"><h2 id="lt">Letter 1</h2><div class="paper" id="lb"></div>
+ <button class="btn" id="nx">Next ➜</button></div>
+</section>
+
+<section class="scr" id="s4">
+ <div class="card"><div style="font-size:60px">💌</div><h2 id="aq" style="font:600 22px/1.4 Poppins,sans-serif;color:var(--ink)"></h2>
+ <button class="btn" id="yes">Yes 💖</button><button class="btn alt" id="no">No</button>
+ <p id="am" style="font-weight:600;min-height:3em"></p></div>
+</section>
+
+<section class="scr" id="s5">
+ <div class="card"><div class="ph" id="ph2">🎂</div><h1 id="fh"></h1>
+ <p id="ft" style="font-size:18px"></p><button class="btn alt" id="again">Replay 🔁</button></div>
+</section>
+
+<div id="ed"></div>
+
+<script>
+/* ===== EDIT HERE (or open this link with #edit at the end for Creator mode) ===== */
+const DEF={
+ from:"laishetti karthik",
+ photo:"",
+ q:[
+  {q:"Who is my crush ..",a:"priyanshi",w:["u 🤍","anjum","my future wife 😁"]},
+  {q:"I am smart ?",a:"offcourse yes",w:["bro! NO","offcourse no","NO"]},
+  {q:"My fav colour ....",a:"light blue",w:["black","brown","red"]}],
+ l:[
+  "**To my sis,**\n\nNow, I don't know how to start... for this, I thought a lot about how to make this letter and whether you would like it or not (don't know).\n\nFirst of all, you are the best sis I have in my life. The way you care, the little, little efforts you put to make me smile (but this time, make me feel happy by sending money).\n\nHmmmm... Jokes aside, seriously, the way you always try to cheer me up means a lot to me.\n\n- Sometimes you motivate me to do more work (not in studies, but in sending reels 😅)...\n\nSometimes I think you have a different dictionary than others. You always come up with something new, new words. I mean, how? After reading this, tell me also. I will also buy that dictionary.\n\nThis is not about you, this is about your behaviour...\n\nJust take it seriously.\n\nThis is only the first one. Read the next letter.",
+  "**What do you think? I write one more...?**\n\nHmm, funny! I don't want to 😭.\n\nHmm, what should I talk about in this letter?\n\nAh, I’ll write what I think about you.\n\n- Whenever I open Insta and a notification pops up, I thought it was you...\n\n- Sometimes I think, what if me and [friend name] don't go to the same school? If we came to your school, would we even remember you, or would you remember us? 🤔\n\n- Sometimes I think it was magic that we studied together in 5th and, after 5 years, how we became friends again... like, how? 🤔\n\n- But I am wondering about your husband. How will you explain his mind with all the new words you learn from online? 😱\n\n**Funny part:**\n\n- These emojis are too good, and I am laughing while writing.\n\n→ Go to the other letter.",
+  "**AHHHHH! 😂**\n\nWhat? You thought I was going to write one more letter?\n\nWell, you’re right! I couldn’t stop myself. 😌\n\nAnd hey, if I ever said anything wrong in these letters, don’t get angry with me. Instead, ask me why I wrote it! 😂\n\nBut seriously, forgive me if anything I wrote hurts you or makes you feel bad. That was never my intention.\n\nI never, ever want to hurt you. ❤️\n\nYou’re not just my non-blood sister; you’re a blessing in my life that I never want to lose.\n\nSometimes, I wonder how lucky I am to have someone like you in my life. We may not be related by blood, but that doesn’t make our bond any less special.\n\nAnd honestly, I hope this friendship stays the same even when we grow older, get busy with our own lives, and have a thousand things to worry about.\n\nNo matter what happens, you’ll always have a special place in my life.\n\n-- karthik"]
+};
+DEF.t={s0t:'🎂 Surprise!',ask:'Before we start… what’s your name?',ph:'Type your name',go:'Let’s go ✨',cd:'HAPPY BIRTHDAY',hb:'Happy Birthday',wish:'MAKE A WISH!!',blow:'Tap to blow the candle 🕯️',blown:'🎉 Wish made! 🎉',intro:'I’ve hidden 3 letters for you. Answer 3 questions about {from} to unlock them 😉',qn:'Question {n} of {t}',wrong:'Oops, not quite! Try again 😜',lt:'💌 Letter {n}',next:'Next ➜',fin:'Finish 💖',ask1:'Hmm… I wrote one more letter 💌 Do you want to read it?',ask2:'Okay okay… there’s one last letter 🥺 Do you want to read it?',yes:'Yes 💖',no:'No',nomsg:'So you don’t have to read 😭… but you have to read 😤',fh:'Happy Birthday, {name}! 🎂',ft:'With all my love, {from} 💖',again:'Replay 🔁'};
+const TK=[['s0t','Start page: title'],['ask','Start page: question'],['ph','Start page: input hint'],['go','Start page: button'],['cd','Countdown text'],['hb','Birthday title'],['wish','Make a wish text'],['blow','Candle button'],['blown','Text after candle is blown'],['intro','Quiz intro ({from} = your name)'],['qn','Question label ({n} of {t})'],['wrong','Wrong answer message'],['lt','Letter title ({n} = number)'],['next','Letter next button'],['fin','Last letter button'],['ask1','1st question: one more letter'],['ask2','2nd question: last letter'],['yes','Yes button'],['no','No button'],['nomsg','Message after clicking No'],['fh','Final title ({name} = her name)'],['ft','Final text ({from} = your name)'],['again','Replay button']];
+/* ================================================================================ */
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let C=JSON.parse(JSON.stringify(DEF));
+try{const t=localStorage.getItem('bdcfg');if(t)C=Object.assign(C,JSON.parse(t))}catch(e){}
+let name='',qi=0,li=0,K=0,rainOn=false;
+C.t=Object.assign({},DEF.t,C.t||{});
+const T=k=>(C.t[k]||'').split('{name}').join(name).split('{from}').join(C.from);
+function txt(){const s=(q,k)=>{$(q).textContent=T(k)};s('#s0 h1','s0t');s('#s0 p','ask');$('#nm').placeholder=T('ph');s('#go','go');s('#ctl','cd');s('#hb','hb');s('.wl','wish');s('#blow','blow');s('#yes','yes');s('#no','no');s('#again','again')}
+txt();
+function show(id){document.querySelectorAll('.scr').forEach(e=>e.classList.toggle('on',e.id===id));scrollTo(0,0)}
+function fx(set,n){const f=$('#fx');for(let i=0;i<n;i++){const s=document.createElement('span');s.textContent=set[i%set.length];s.style.cssText=`left:${Math.random()*100}%;font-size:${14+Math.random()*24}px;animation-duration:${6+Math.random()*8}s;animation-delay:${-Math.random()*8}s`;f.appendChild(s)}}
+function photo(){document.querySelectorAll('.ph').forEach(p=>{p.innerHTML=C.photo?`<img src="${C.photo}" alt="">`:'🎂'})}
+
+$('#go').onclick=()=>{const v=$('#nm').value.trim();if(!v){$('#nm').focus();return}name=v;show('s1');rain();count()};
+$('#nm').onkeydown=e=>{if(e.key==='Enter')$('#go').click()};
+
+function rain(){const c=$('#cv'),x=c.getContext('2d');let w,h,n,y;const ch='HAPPYBIRTHDAY♥01'.split(''),pk=['#ff4d94','#ff7eb6','#ff9ecb','#ffc2de','#e6399b'];
+ function fit(){w=c.width=innerWidth;h=c.height=innerHeight;n=Math.ceil(w/18);y=Array.from({length:n},()=>Math.random()*-40)}
+ fit();onresize=fit;rainOn=true;
+ (function f(){if(!rainOn)return;x.fillStyle='rgba(18,0,14,.14)';x.fillRect(0,0,w,h);x.font='16px monospace';
+  for(let i=0;i<n;i++){x.fillStyle=pk[(i*7)%5];x.fillText(ch[Math.random()*ch.length|0],i*18,y[i]*18);if(y[i]*18>h&&Math.random()>.97)y[i]=0;y[i]+=.6}
+  requestAnimationFrame(f)})()}
+function count(){let n=9;const e=$('#num');(function t(){e.textContent=n;e.classList.remove('pop');void e.offsetWidth;e.classList.add('pop');
+ if(n--<=1)setTimeout(()=>{rainOn=false;main()},1000);else setTimeout(t,1000)})()}
+
+function main(){photo();art();fx(['🎉','🎊','✨','🤍','❤️'],16);$('#who').textContent=name;
+ $('#intro').textContent=`I’ve hidden 3 letters for you. Answer 3 questions about ${C.from} to unlock them 😉`;
+ qi=0;li=0;$('#locks').textContent='🔒🔒🔒';$('#wish').style.display='';$('#qz').style.display='none';$('#intro').textContent=T('intro');show('s2');confetti(180);
+ setInterval(()=>{if(document.querySelector('#s2.on,#s5.on'))confetti(7)},900)}
+$('#blow').onclick=()=>{$('#fl2').style.display=$('#gl').style.display='none';$('#blow').disabled=true;$('#blow').textContent=T('blown');confetti(240,true);setTimeout(()=>{$('#wish').style.display='none';$('#qz').style.display='';quiz()},1600)};
+function quiz(){const q=C.q[qi];$('#qn').textContent=T('qn').replace('{n}',qi+1).replace('{t}',C.q.length);$('#qt').textContent=q.q;$('#hint').textContent='';
+ const b=$('#opts');b.innerHTML='';[q.a,...q.w].sort(()=>Math.random()-.5).forEach(t=>{const e=document.createElement('button');e.className='opt';e.textContent=t;
+  e.onclick=()=>{if(t===q.a){e.classList.add('ok');$('#locks').textContent='🔓'.repeat(qi+1)+'🔒'.repeat(C.q.length-qi-1);
+    setTimeout(()=>{++qi<C.q.length?quiz():(show('s3'),letter())},700)}
+   else{e.classList.add('bad');setTimeout(()=>e.classList.remove('bad'),500);$('#hint').textContent=T('wrong')}};b.appendChild(e)})}
+
+function letter(){$('#lt').textContent=T('lt').replace('{n}',li+1);$('#lb').innerHTML=esc((C.l[li]||'').split('{name}').join(name)).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');$('#nx').textContent=T(li<2?'next':'fin')}
+$('#nx').onclick=()=>{li<2?ask(li+1):end()};
+function ask(k){K=k;show('s4');const n=$('#no');n.style.left=n.style.top='';n.classList.remove('run');$('#am').textContent='';
+ $('#aq').textContent=T(k==1?'ask1':'ask2')}
+$('#yes').onclick=()=>{li++;show('s3');letter()};
+['pointerenter','pointerdown','click'].forEach(t=>$('#no').addEventListener(t,e=>{
+ if(K==2){e.preventDefault();const n=$('#no');n.classList.add('run');
+  n.style.left=Math.max(10,Math.random()*(innerWidth-n.offsetWidth-20))+'px';n.style.top=Math.max(10,Math.random()*(innerHeight-n.offsetHeight-20))+'px'}
+ else if(t=='click'){$('#am').textContent=T('nomsg');setTimeout(()=>{li++;show('s3');letter()},2600)}}));
+function end(){photo();show('s5');fx(['🎉','🎊','💖','✨','🎈'],30);confetti(240,true);confetti(120);$('#fh').textContent=T('fh');$('#ft').textContent=T('ft')}
+$('#again').onclick=()=>location.reload();
+
+/* ===== Confetti + scrapbook decorations ===== */
+const cf=$('#cf'),cx=cf.getContext('2d');let P=[],cr=false;
+function fit2(){cf.width=innerWidth;cf.height=innerHeight}fit2();addEventListener('resize',fit2);
+function confetti(n,b){const col=['#e63946','#f4a261','#2a9d8f','#4361ee','#ffd166','#c77dff','#ff70a6'];
+ for(let i=0;i<n;i++)P.push({x:b?innerWidth/2:Math.random()*innerWidth,y:b?innerHeight*.6:-20-Math.random()*innerHeight*.5,vx:b?(Math.random()-.5)*16:(Math.random()-.5)*2,vy:b?-Math.random()*15-4:Math.random()*3+1,w:5+Math.random()*6,h:3+Math.random()*5,r:Math.random()*6,vr:(Math.random()-.5)*.3,c:col[i%col.length]});
+ if(!cr){cr=true;requestAnimationFrame(tick)}}
+function tick(){cx.clearRect(0,0,cf.width,cf.height);P=P.filter(p=>p.y<cf.height+30);
+ P.forEach(p=>{p.vy=Math.min(p.vy+.14,5);p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()});
+ if(P.length)requestAnimationFrame(tick);else cr=false}
+function bunt(){let s='<svg viewBox="0 0 240 150" fill="none" stroke="#8b1d2c" stroke-width="2.2" stroke-linecap="round">';
+ [[8,36],[40,60]].forEach(([y0,a])=>{const P=t=>[8+t*224,y0+Math.sin(t*Math.PI)*a];let d='M';for(let i=0;i<=20;i++){const[x,y]=P(i/20);d+=(i?'L':'')+x+' '+y}s+=`<path d="${d}"/>`;
+  for(let t=.07;t<.93;t+=.115){const[a1,b1]=P(t),[a2,b2]=P(t+.075);s+=`<path d="M${a1} ${b1}L${(a1+a2)/2} ${(b1+b2)/2+24}L${a2} ${b2}"/>`}});return s+'</svg>'}
+function art(){const a=$('#art');if(a.innerHTML)return;
+ a.innerHTML=`<div class="deco" style="top:0;left:0;width:min(48vw,400px)">${bunt()}</div>
+<div class="deco" style="top:0;right:0;width:min(48vw,400px);transform:scaleX(-1)">${bunt()}</div>
+<div class="deco" style="top:2px;left:6px;font-size:64px;line-height:1">★</div>
+<div class="gm" style="right:-6px;top:24%;width:min(9vw,56px);height:36%;border-radius:40px 0 0 40px"></div>
+<div class="gm" style="left:0;bottom:-6px;width:42%;height:min(9vw,52px);border-radius:0 40px 0 0"></div>
+<div class="deco" style="left:0;top:46%;width:min(16vw,84px)"><svg viewBox="0 0 90 90"><rect x="6" y="22" width="78" height="56" rx="10" fill="#c9c2bc" stroke="#222" stroke-width="3"/><circle cx="45" cy="50" r="19" fill="#333" stroke="#eee" stroke-width="4"/><circle cx="45" cy="50" r="9" fill="#111"/><rect x="14" y="12" width="20" height="12" rx="3" fill="#8b1d2c"/></svg></div>
+<div class="deco" style="right:2px;top:30%;width:min(13vw,70px)"><svg viewBox="0 0 80 130"><path d="M6 10h68L40 62z" fill="#a01c2e" stroke="#4a0c16" stroke-width="3"/><path d="M40 62v52M22 120h36" stroke="#222" stroke-width="4" stroke-linecap="round"/></svg></div>
+<div class="deco" style="right:6px;bottom:6px;width:min(20vw,110px)"><svg viewBox="0 0 100 100"><defs><clipPath id="dc"><circle cx="50" cy="50" r="44"/></clipPath></defs><g clip-path="url(#dc)"><rect width="100" height="100" fill="#b9b9bf"/><path d="M0 20h100M0 40h100M0 60h100M0 80h100M20 0v100M40 0v100M60 0v100M80 0v100" stroke="#555" stroke-width="2"/></g><circle cx="50" cy="50" r="44" fill="none" stroke="#333" stroke-width="3"/></svg></div>
+<div class="deco" style="left:24%;bottom:12%;font-size:38px;line-height:1.1">♡<br>♡</div>
+<div class="deco" style="right:13%;bottom:28%;font-size:38px;line-height:1.1">♡<br>♡</div>
+<div class="deco" style="left:20%;top:28%;font-size:34px">✦</div><div class="deco tw" style="right:20%;top:30%;font-size:34px">✦</div><div class="deco" style="left:1%;top:58%;width:min(15vw,88px)"><svg viewBox="0 0 90 140" stroke="#8b1d2c" stroke-width="2.5" fill="none"><path d="M28 55q10 40 17 80M62 61q-8 40-17 74M45 79v56"/><ellipse cx="28" cy="30" rx="20" ry="25" fill="#b03a48"/><ellipse cx="62" cy="38" rx="18" ry="23" fill="#f3c6cc"/><ellipse cx="45" cy="55" rx="19" ry="24" fill="#fff"/></svg></div><div class="deco" style="right:25%;bottom:6px;width:min(14vw,68px)"><svg viewBox="0 0 80 80" fill="#f8ebe8" stroke="#8b1d2c" stroke-width="3" stroke-linejoin="round"><rect x="8" y="34" width="64" height="40"/><rect x="4" y="22" width="72" height="14" fill="#f1d0d3"/><path d="M40 22v52"/><path d="M40 22c-18-18-26 0-8 0M40 22c18-18 26 0 8 0" fill="none"/></svg></div><div class="deco tw" style="left:5%;top:22%;font-size:30px">★</div><div class="deco tw" style="right:7%;top:20%;font-size:26px">★</div><div class="deco tw" style="left:38%;bottom:3%;font-size:28px">✦</div><div class="deco tw" style="right:4%;top:60%;font-size:24px">✧</div><div class="deco" style="right:5%;bottom:24%;font:400 38px 'Mrs Saint Delafield',cursive;transform:rotate(-10deg)">xoxo</div><div class="deco" style="left:30%;top:2%;font-size:26px">♪</div>`;a.style.display='block'}
+
+/* ===== Creator mode: add #edit at the end of the link ===== */
+function edit(){const d=$('#ed');d.classList.add('on');
+ d.innerHTML=`<div class="card"><h2>✏️ Creator mode</h2><p class="sm">Saves on this device for preview. To change the link you send her, press “Copy settings” and paste it to Claude (send the photo too).</p>
+ <label>Your name</label><input id="e_f" value="${esc(C.from)}">
+ <label>Her photo</label><input type="file" id="e_p" accept="image/*">
+ ${[0,1,2].map(i=>`<label>Question ${i+1}</label><input id="eq${i}" value="${esc(C.q[i].q)}"><input id="ea${i}" placeholder="Correct answer" value="${esc(C.q[i].a)}"><input id="ew${i}" placeholder="3 wrong answers, comma separated" value="${esc(C.q[i].w.join(', '))}">`).join('')}
+ ${[0,1,2].map(i=>`<label>Letter ${i+1} (use {name} for her name)</label><textarea id="el${i}" rows="5">${esc(C.l[i])}</textarea>`).join('')}
+ <h2 style="font:600 22px Poppins,sans-serif;margin-top:18px">All texts on the website</h2>${TK.map(([k,l])=>`<label>${l}</label><input id="t_${k}" value="${esc(C.t[k])}">`).join('')}
+ <textarea id="e_o" rows="3" placeholder="Copied settings appear here" style="display:none"></textarea>
+ <button class="btn" id="e_s">Save &amp; preview</button><button class="btn alt" id="e_c">Copy settings</button><button class="btn alt" id="e_r">Reset</button><button class="btn alt" id="e_x">Close</button></div>`;
+ const rd=()=>({from:$('#e_f').value,photo:C.photo,t:Object.fromEntries(TK.map(([k])=>[k,$('#t_'+k).value])),q:[0,1,2].map(i=>({q:$('#eq'+i).value,a:$('#ea'+i).value,w:$('#ew'+i).value.split(',').map(s=>s.trim()).filter(Boolean)})),l:[0,1,2].map(i=>$('#el'+i).value)});
+ $('#e_p').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas'),s=Math.min(1,420/Math.max(im.width,im.height));c.width=im.width*s;c.height=im.height*s;c.getContext('2d').drawImage(im,0,0,c.width,c.height);C.photo=c.toDataURL('image/jpeg',.82);photo();$('#e_p').insertAdjacentHTML('afterend','<p class="sm">Photo added ✅</p>')};im.src=r.result};r.readAsDataURL(f)};
+ $('#e_s').onclick=()=>{C=rd();try{localStorage.setItem('bdcfg',JSON.stringify(C))}catch(e){}location.hash='';location.reload()};
+ $('#e_c').onclick=()=>{const o=$('#e_o'),c=rd();c.photo='';o.style.display='block';o.value=JSON.stringify(c);o.select();try{navigator.clipboard.writeText(o.value)}catch(e){}};
+ $('#e_r').onclick=()=>{try{localStorage.removeItem('bdcfg')}catch(e){}location.hash='';location.reload()};
+ $('#e_x').onclick=()=>{location.hash='';location.reload()}}
+if(location.hash==='#edit')edit();
+addEventListener('hashchange',()=>{if(location.hash==='#edit')edit()});
+</script></body></html>
